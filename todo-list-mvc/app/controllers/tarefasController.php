@@ -6,7 +6,15 @@ class tarefaController{
     public function __construct(){
         $this->tarefaModel = new Tarefa();
 
-    }
+}
+
+    ##listar 
+
+    public function index(){
+        $tarefa = $this->tarefaModel->listar();
+        include __DIR__.'/../views/listar.php';
+
+} 
 
     ##criar
     public function criar(){
@@ -17,7 +25,7 @@ class tarefaController{
         
         header("Location: index.php");
         
-    }
+}
     ##excluir
 
     public function excluir(){
@@ -29,7 +37,7 @@ class tarefaController{
         
 
 
-    }
+}
 
 
 

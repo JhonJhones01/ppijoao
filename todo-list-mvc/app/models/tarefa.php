@@ -8,7 +8,7 @@ class Tarefa{
         $db = new Database() ;
         $this->conn = $db->conectar() ;
 
-    }
+}
 
     ##listar
 
@@ -29,14 +29,14 @@ class Tarefa{
         $descricao = $this->conn->real_escape_string($descricao);
         $sql = "INSERT INTO tarefas (descricao) VALUES ('$descricao')";
         return $this->conn->query($sql);
-    }
+}
     ##excluir
     
     public function excluir($id){
     $id = intval( $id );
     $sql = "DELETE FROM tarefas WHERE id = $id";
     return $this->conn->query($sql);  
-    }
+}
 }
 
 
