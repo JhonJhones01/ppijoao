@@ -5,7 +5,7 @@ $usuario = 'root';
 $senha = '';
 $database = 'login';
 
-$mysqli = new mysqli($host,$usuario,$senha);
+$mysqli = new mysqli($host,$usuario,$senha,$database);
 
 if($mysqli->connect_error){
     die("não deu certo fazer a conexão");

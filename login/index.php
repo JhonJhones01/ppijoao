@@ -2,6 +2,7 @@
 
 include('conexao.php');
 
+
 if(isset($_POST['email']) || isset($_POST['senha'])){
     if(strlen($_POST['email']) == 0){
         echo "Preencha seu email";
@@ -13,8 +14,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
     else{
         $email = $mysqli->real_escape_string($_POST['email']);
         $senha = $mysqli->real_escape_string($_POST['senha']);
-
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha' ";
+        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 
         $lista_usuarios = $mysqli->query($sql);
 
@@ -42,6 +42,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
 }
 
 ?>
+
 <!DOCTYPE html> 
 <html lang="en">
 <head>
